@@ -17,14 +17,8 @@
         <a href="{{ path('fos_user_security_logout') }}">
             {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
         </a>
-
-        <div>
-            <a href="{{ path('oauth_add_client') }}">Create OAuth client for current User</a>
-        </div>
     {% else %}
         <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-        <a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a>
-
     {% endif %}
 </div>
 
