@@ -19,25 +19,12 @@ http POST http://localhost/currency/web/app_dev.php/oauth/v2/token \
     "error_description": "The grant type is unauthorized for this client_id"
 }
 
-
-http GET http://ledzep.dev:8000/app_dev.php/links \
-    "Authorization:Bearer MDFjZGI1MTg4MTk3YmEwOWJmMzA4NmRiMTgxNTM0ZDc1MGI3NDgzYjIwNmI3NGQ0NGE0YTQ5YTVhNmNlNDZhZQ"
-
-http://localhost/currency/web/app_dev.php/oauth/v2/auth?client_id=13_3uh166kvteyo00g484gsk84wgsc80k4wsc0ggcgcskc8kw8cok&redirect_uri=127.0.0.1&response_type=token
-
-
 "access_token": "YWI5ODE2M2JiNjVhMGY5YWJjNzE2ODhhMTY4Y2Y4MTAzYTUwYWU3MGM4NTk2ZWY1ODE0Yzc3NDJlNzY0MzNjZA",
 
-
-http://127.0.0.1/currency/web/app_dev.php/api/test.json
-
-http GET http://127.0.0.1/currency/web/app_dev.php/api/test.json \
-    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
-
 http GET http://127.0.0.1/currency/web/app_dev.php/api/news \
-    author==10 \
+    author==6 \
     status==0 \
-    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+    "Authorization:Bearer YWI5ODE2M2JiNjVhMGY5YWJjNzE2ODhhMTY4Y2Y4MTAzYTUwYWU3MGM4NTk2ZWY1ODE0Yzc3NDJlNzY0MzNjZA"
 
 
 http GET http://127.0.0.1/currency/web/app_dev.php/api/news/create.json \
@@ -120,3 +107,6 @@ ALTER TABLE `user`
 
 --
 -- AUTO_INCREMENT dla tabeli `user`
+
+
+bin/phpunit -c /app
