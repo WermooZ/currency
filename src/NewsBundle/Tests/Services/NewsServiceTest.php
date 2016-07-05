@@ -84,5 +84,4 @@ class NewsServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals($expectedResult, $this->sut->getNewsIdsByFilters($filters));
     }
-
 }
