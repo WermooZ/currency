@@ -1,2 +1,11 @@
 services:
+#      # repositories
+      user.user_repository:
+          class: UserBundle\Repository\UserRepository
+          factory: ["@doctrine", getRepository]
+          arguments: [ "UserBundle:User" ]
 
+      # services
+      user.user_service:
+          class: UserBundle\Services\UserService
+          arguments: [ "@security.encoder_factory" ]

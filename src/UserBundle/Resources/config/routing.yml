@@ -4,5 +4,5 @@ homepage:
 
 api_user:
     resource: "@UserBundle/Controller/RestController.php"
-    prefix: /api/user/
+    prefix: /api/
     type: rest

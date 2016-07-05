@@ -33,7 +33,7 @@ class RestController extends FosRestController
         ]);
 
         $data = [
-            'Found news ids:' => implode(', ', $news)
+            $news
         ];
 
         $view = $this->view($data, Response::HTTP_FOUND );
