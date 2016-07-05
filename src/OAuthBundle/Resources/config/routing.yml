@@ -1,0 +1,3 @@
+add_client:
+    path: /add_client
+    defaults: { _controller: OAuthBundle:Default:addClient }

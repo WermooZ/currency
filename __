@@ -1,0 +1,65 @@
+http://127.0.0.1/currency/web/app_dev.php/add_client
+http://127.0.0.1/currency/web/app_dev.php/oauth/v2/auth?client_id=ID&amp;redirect_uri=127.0.0.1&amp;response_type=token
+
+http://127.0.0.1/currency/web/app_dev.php/register/confirm/
+
+
+http GET http://127.0.0.1/currency/web/app_dev.php/oauth/v2/auth?client_id=13_3uh166kvteyo00g484gsk84wgsc80k4wsc0ggcgcskc8kw8cok&amp;redirect_uri=127.0.0.1&amp;response_type=token
+
+
+http POST http://localhost/currency/web/app_dev.php/oauth/v2/token \
+    grant_type=password \
+    client_id=14_a3lr7mjzi60wwg4s008s0w8c0kkgog800o0g44c08g88c8wgs \
+    client_secret=5fueks2vf30g0w8c4w0wsks8sgsw4044gso8c0wogwkoocgosc \
+    username=wermoos \
+    password=pass
+
+{
+    "error": "unauthorized_client",
+    "error_description": "The grant type is unauthorized for this client_id"
+}
+
+
+http GET http://ledzep.dev:8000/app_dev.php/links \
+    "Authorization:Bearer MDFjZGI1MTg4MTk3YmEwOWJmMzA4NmRiMTgxNTM0ZDc1MGI3NDgzYjIwNmI3NGQ0NGE0YTQ5YTVhNmNlNDZhZQ"
+
+http://localhost/currency/web/app_dev.php/oauth/v2/auth?client_id=13_3uh166kvteyo00g484gsk84wgsc80k4wsc0ggcgcskc8kw8cok&redirect_uri=127.0.0.1&response_type=token
+
+
+"access_token": "YWI5ODE2M2JiNjVhMGY5YWJjNzE2ODhhMTY4Y2Y4MTAzYTUwYWU3MGM4NTk2ZWY1ODE0Yzc3NDJlNzY0MzNjZA",
+
+
+http://127.0.0.1/currency/web/app_dev.php/api/test.json
+
+http GET http://127.0.0.1/currency/web/app_dev.php/api/test.json \
+    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+
+http GET http://127.0.0.1/currency/web/app_dev.php/api/news \
+    author==10 \
+    status==0 \
+    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+
+
+http GET http://127.0.0.1/currency/web/app_dev.php/api/news/create.json \
+    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+
+http DELETE http://127.0.0.1/currency/web/app_dev.php/api/news/.json \
+    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+
+http PUT http://127.0.0.1/currency/web/app_dev.php/api/news.json \
+    title="news title" \
+    content="bla bla bla" \
+    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+
+http POST http://127.0.0.1/currency/web/app_dev.php/api/news/3.json \
+    title="news title" \
+    content="bla bla bla updated" \
+    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+
+
+http GET http://127.0.0.1/currency/web/app_dev.php/api/news/create.json?title=tittt&content=doo \
+    "Authorization:Bearer N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg"
+
+
+
+N2U2ZGQyNTg3NDE2YmQ2ZGMxMjcxMTMyOGI3ODNkMTVlNjdlNmVmMDE3MTc4OGYxNzM1NGZhNjY2YjJkNjJkYg

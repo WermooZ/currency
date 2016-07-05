@@ -4,7 +4,7 @@ security:
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
-        default_provider:
+        user_provider:
             id:  user.user_provider
     encoders:
             Symfony\Component\Security\Core\User\User: plaintext
@@ -12,9 +12,9 @@ security:
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+#        dev:
+#            pattern: ^/(_(profiler|wdt)|css|images|js)/
+#            security: false
         oauth_token:
             pattern:    ^/oauth/v2/token
             security:   false
@@ -25,9 +25,11 @@ security:
             pattern:    ^/api
             fos_oauth:  true
             stateless:  true
+            anonymous:  true
         main:
             anonymous: ~
             form_login:
+                provider: user_provider
                 check_path:             fos_user_security_check
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
             logout: true

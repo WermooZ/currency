@@ -1,9 +1,9 @@
 <?php
 
-namespace RestBundle;
+namespace NewsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class RestBundle extends Bundle
+class NewsBundle extends Bundle
 {
 }

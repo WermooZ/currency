@@ -22,7 +22,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new UserBundle\UserBundle(),
             new OAuthBundle\OAuthBundle(),
-            new RestBundle\RestBundle(),
+            new NewsBundle\NewsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

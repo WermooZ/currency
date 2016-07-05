@@ -3,7 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@UserBundle/Resources/config/services.yml" }
-    - { resource: "@RestBundle/Resources/config/services.yml" }
+    - { resource: "@NewsBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -121,3 +121,8 @@ fos_oauth_server:
     access_token_class:  OAuthBundle\Entity\AccessToken
     refresh_token_class: OAuthBundle\Entity\RefreshToken
     auth_code_class:     OAuthBundle\Entity\AuthCode
+    service:
+        user_provider: user.user_provider
+        options:
+            supported_scopes: user
+            access_token_lifetime: 604800 # one week for testing mormally its about 3600

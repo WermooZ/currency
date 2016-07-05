@@ -1,4 +1,0 @@
-test:
-    resource: "@RestBundle/Controller/DefaultController.php"
-    prefix: /api/
-    type: rest

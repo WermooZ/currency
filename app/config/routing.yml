@@ -1,9 +1,13 @@
-rest:
-    resource: "@RestBundle/Resources/config/routing.yml"
+news:
+    resource: "@NewsBundle/Resources/config/routing.yml"
     prefix:   /
 
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+oauth:
+    resource: "@OAuthBundle/Resources/config/routing.yml"
     prefix:   /
 
 fos_user:

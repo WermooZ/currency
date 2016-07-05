@@ -1,0 +1,11 @@
+services:
+    # repositories
+    news.news_repository:
+        class: NewsBundle\Repository\NewsRepository
+        factory: ["@doctrine", getRepository]
+        arguments: [ "NewsBundle:News" ]
+
+    # services
+    news.news_service:
+        class: NewsBundle\Services\NewsService
+        arguments: ["@news.news_repository"]
