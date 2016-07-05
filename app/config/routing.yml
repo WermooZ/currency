@@ -10,6 +10,10 @@ oauth:
     resource: "@OAuthBundle/Resources/config/routing.yml"
     prefix:   /
 
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /doc
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 

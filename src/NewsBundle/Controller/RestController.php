@@ -8,10 +8,19 @@ use FOS\RestBundle\Request\ParamFetcher;
 use FOS\RestBundle\Controller\Annotations\QueryParam;
 use FOS\RestBundle\Controller\Annotations\RequestParam;
 use NewsBundle\Services\NewsService;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 class RestController extends FosRestController
 {
     /**
+     * @ApiDoc(
+     *   resource = true,
+     *   description = "Get News list by filters",
+     *   statusCodes = {
+     *     302 = "Returned when successful",
+     *   }
+     * )
+     *
      * @QueryParam(name="author", requirements="\d+", allowBlank=true, nullable=true, description="news author filter")
      * @QueryParam(name="status", requirements="\d+", allowBlank=true, nullable=true, description="news status filter")
      */
@@ -32,6 +41,14 @@ class RestController extends FosRestController
     }
 
     /**
+     * @ApiDoc(
+     *   resource = true,
+     *   description = "Create news",
+     *   statusCodes = {
+     *     302 = "Returned when successful",
+     *   }
+     * )
+     *
      * @RequestParam(name="title", description="news title")
      * @RequestParam(name="content", description="news content")
      */
@@ -59,6 +76,15 @@ class RestController extends FosRestController
     }
 
     /**
+     * @ApiDoc(
+     *   resource = true,
+     *   description = "Update news",
+     *   statusCodes = {
+     *     200 = "Returned when successful",
+     *     404 = "Returned when news with given id not exist or has different author",
+     *   }
+     * )
+     *
      * @RequestParam(name="title", nullable=true, description="news title")
      * @RequestParam(name="content", nullable=true, description="news content")
      * @RequestParam(name="status", nullable=true, description="news status")
@@ -96,6 +122,15 @@ class RestController extends FosRestController
     }
 
     /**
+     @ApiDoc(
+     *   resource = true,
+     *   description = "Delete news",
+     *   statusCodes = {
+     *     200 = "Returned when successful",
+     *     404 = "Returned when news with given id not exist or has different author",
+     *   }
+     * )
+     *
      * @param integer $newsId
      *
      * @return Response

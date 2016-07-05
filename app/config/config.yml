@@ -126,3 +126,5 @@ fos_oauth_server:
         options:
             supported_scopes: user
             access_token_lifetime: 604800 # one week for testing mormally its about 3600
+
+nelmio_api_doc: ~
