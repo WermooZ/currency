@@ -7,8 +7,14 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use OAuthBundle\Entity\AccessToken;
 
+/**
+ * Class LoadAccessTokenData
+ */
 class LoadAccessTokenData extends AbstractFixture implements OrderedFixtureInterface
 {
+    /**
+     * @param ObjectManager $manager
+     */
     public function load(ObjectManager $manager)
     {
         $token = new AccessToken();
@@ -24,6 +30,9 @@ class LoadAccessTokenData extends AbstractFixture implements OrderedFixtureInter
         $this->addReference('token', $token);
     }
 
+    /**
+     * @return int
+     */
     public function getOrder()
     {
         return 30;

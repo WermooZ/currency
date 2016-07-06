@@ -9,6 +9,9 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use UserBundle\Entity\User;
 
+/**
+ * Class LoadUserData
+ */
 class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, ContainerAwareInterface
 {
     /**
@@ -16,11 +19,17 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
      */
     private $container;
 
+    /**
+     * @param ContainerInterface|null $container
+     */
     public function setContainer(ContainerInterface $container = null)
     {
         $this->container = $container;
     }
 
+    /**
+     * @param ObjectManager $manager
+     */
     public function load(ObjectManager $manager)
     {
         $user = new User();
@@ -39,6 +48,9 @@ class LoadUserData extends AbstractFixture implements OrderedFixtureInterface, C
         $this->addReference('user', $user);
     }
 
+    /**
+     * @return int
+     */
     public function getOrder()
     {
         return 10;

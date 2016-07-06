@@ -9,6 +9,10 @@ use FOS\RestBundle\Controller\Annotations\RequestParam;
 use NewsBundle\Services\UserService;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
+/**
+ * Class RestController
+ * @package UserBundle\Controller
+ */
 class RestController extends FosRestController
 {
     /**

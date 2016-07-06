@@ -7,6 +7,9 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use OAuthBundle\Entity\Client;
 
+/**
+ * Class LoadClientData
+ */
 class LoadClientData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
@@ -23,6 +26,9 @@ class LoadClientData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('client', $client);
     }
 
+    /**
+     * @return int
+     */
     public function getOrder()
     {
         return 20;

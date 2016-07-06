@@ -10,6 +10,9 @@ use FOS\RestBundle\Controller\Annotations\RequestParam;
 use NewsBundle\Services\NewsService;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
+/**
+ * Class RestController
+ */
 class RestController extends FosRestController
 {
     /**
@@ -122,7 +125,7 @@ class RestController extends FosRestController
     }
 
     /**
-     @ApiDoc(
+     * @ApiDoc(
      *   resource = true,
      *   description = "Delete news",
      *   statusCodes = {

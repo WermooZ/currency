@@ -21,11 +21,17 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * User constructor.
+     */
     public function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * @return array
+     */
     public function getRoles()
     {
         return ['ROLE_USER'];

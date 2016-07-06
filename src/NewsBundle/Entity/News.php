@@ -63,48 +63,67 @@ class News
         return $this->id;
     }
 
-
+    /**
+     * @return mixed
+     */
     public function getTitle()
     {
         return $this->title;
     }
 
+    /**
+     * @param $value
+     */
     public function setTitle($value)
     {
         $this->title = $value;
     }
 
+    /**
+     * @return mixed
+     */
     public function getContent()
     {
         return $this->content;
     }
 
+    /**
+     * @param $value
+     */
     public function setContent($value)
     {
         $this->content = $value;
     }
 
+    /**
+     * @return mixed
+     */
     public function getAuthor()
     {
         return $this->author;
     }
 
+    /**
+     * @param User $value
+     */
     public function setAuthor(User $value)
     {
         $this->author = $value;
     }
 
+    /**
+     * @return mixed
+     */
     public function getStatus()
     {
         return $this->status;
     }
 
+    /**
+     * @param $value
+     */
     public function setStatus($value)
     {
         $this->status = $value;
     }
-
-    
-
-
 }

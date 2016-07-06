@@ -7,8 +7,14 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use NewsBundle\Entity\News;
 
+/**
+ * Class LoadNewsData
+ */
 class LoadNewsData extends AbstractFixture implements OrderedFixtureInterface
 {
+    /**
+     * @param ObjectManager $manager
+     */
     public function load(ObjectManager $manager)
     {
         $news = new News();
@@ -22,6 +28,9 @@ class LoadNewsData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('news', $news);
     }
 
+    /**
+     * @return int
+     */
     public function getOrder()
     {
         return 30;

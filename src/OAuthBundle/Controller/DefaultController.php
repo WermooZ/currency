@@ -7,8 +7,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class DefaultController
+ */
 class DefaultController extends Controller
 {
+    /**
+     * @return mixed
+     */
     public function addClientAction()
     {
         $clientManager = $this->get('fos_oauth_server.client_manager.default');
